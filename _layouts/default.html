@@ -1,35 +1,34 @@
-
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Basic HTML Skeleton</title>
-    <meta name="author" content="" />
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <head>
+        <meta charset="utf-8" />
+        <title>{{site.title}}</title>
+        <meta name="author" content="{{site.title}}" />
+        <meta name="description" content="{{site.description}}" />
+        <meta
+            content="{{ 'assets/dionysus.png' | relative_url }}"
+            property="og:image"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-    <meta charset="utf-8" />
-    <title>{{site.title}}</title>
-    <meta name="author" content="{{site.title}}" />
-    <meta name="description" content="{{site.description}}" />
-    <meta
-      content="{{ 'assets/dionysus.png' | relative_url }}"
-      property="og:image"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
-  </head>
-
-  <body class="flex flex-col justify-center items-center min-h-screen bg-pink-900 text-4xl"
-      style="font-family: 'Fraunces', serif; font-optical-sizing: auto font-weight: 420; font-style: italic; font-variation-settings:
+    <body
+        class="flex flex-col justify-center items-center min-h-screen text-4xl"
+        style="font-family: 'Fraunces', serif; font-optical-sizing: auto font-weight: 420; font-style: italic; font-variation-settings:
       'SOFT' 50,
-      'WONK' 1;">
-      Dionysian
-      <a href="mailto:{{site.email}}" class="w-1/2 h-auto py-3"> <img src="{{ '/assets/dionysus.png' | relative_url }}"/></a>
-      Wine
-{{content}}
-  </body>
+      'WONK' 1;"
+    >
+        Dionysian
+        <a href="mailto:{{site.email}}" class="w-1/2 h-auto py-3">
+            <img src="{{ '/assets/dionysus.png' | relative_url }}"
+        /></a>
+        Wine {{content}}
+    </body>
 </html>
